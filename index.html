@@ -269,6 +269,32 @@ a{color:var(--ink)}
 .more-body p:last-child{margin:0}
 .more-body .mh{font-weight:800;margin:12px 0 4px;color:var(--go)}
 @media (prefers-reduced-motion: reduce){.more summary i{transition:none}}
+.fi-intro{padding:18px 22px 0;margin:0 0 12px;font-size:1.08rem}
+.fi{margin:0 22px 16px;display:grid;gap:10px}
+.fi-row{display:grid;grid-template-columns:74px 1fr;gap:14px;align-items:center;background:var(--bg);border-radius:14px;padding:12px 14px}
+.fi-top{background:var(--sellbg);border:2px solid var(--sell)}
+.fi-c{display:flex;align-items:center;justify-content:center;height:56px;border-radius:12px;background:var(--sell);color:#FFFFFF;font-size:1.6rem;font-weight:900}
+.fi-lo{background:#7FA6CC}
+.fi-no{background:var(--line);color:var(--muted)}
+.fi-t b{display:block;font-size:1.05rem;line-height:1.25}
+.fi-t small{display:block;font-size:.88rem;color:var(--muted);line-height:1.35;margin-top:2px}
+.sch-one{margin:20px 22px 14px;font-size:1.12rem;line-height:1.45}
+.sch-set{margin:0 22px 18px;background:var(--gobg);border-radius:14px;padding:14px 16px;display:grid;gap:8px}
+.sch-h{font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--go)}
+.sch-row{display:grid;grid-template-columns:112px 1fr;gap:10px;align-items:center;font-size:1rem}
+.sch-tm{font-weight:800}
+.sch-sub{margin:4px 22px 0;font-size:.82rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sch-btns{display:grid;gap:10px;margin:8px 22px 18px}
+.sb{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:2px solid var(--go);border-radius:14px;padding:12px 16px;font-size:1.02rem;line-height:1.35}
+.sb b{display:block;color:var(--go);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.sb small{display:block;color:var(--muted);font-size:.85rem;margin-top:2px}
+.sb::after{content:" \2192";color:var(--go);font-weight:800}
+@media (max-width:420px){.fi,.sch-set,.sch-btns{margin-inline:18px}.sch-one,.fi-intro{margin-inline:18px;padding-inline:0}.fi-intro{padding-inline:18px;margin-inline:0}.sch-row{grid-template-columns:100px 1fr}}
+.sch-row{grid-template-columns:auto 1fr!important;gap:14px}
+.sch-tm{white-space:nowrap;background:var(--card);border-radius:8px;padding:2px 10px;font-size:.95rem}
+.sb{position:relative;padding-right:44px}
+.sb::after{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.4rem}
+.if-nobind .pts{padding-top:0}
 </style>
 </head>
 <body>
@@ -419,7 +445,7 @@ a{color:var(--ink)}
         <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="2" width="22" height="26" rx="3" fill="#FFFFFF" stroke="#13263B" stroke-width="2"/><path d="M4 8h22" stroke="#13263B" stroke-width="2"/><circle cx="8" cy="5" r="1.2" fill="#13263B"/><circle cx="15" cy="18" r="7" fill="#BFE3F7" stroke="#13263B" stroke-width="2"/><path d="M10 19q2.5-2 5 0t5 0" stroke="#1F6FB2" stroke-width="1.6" fill="none"/></svg><span>Run your <b>big appliances</b> now: washing machine, dryer and dishwasher. Also <b>hot water</b> or a <b>pool pump</b> on a timer, and charging an <b>electric car</b>.</span></li>
         <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#8A5F00"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="12" font-weight="800" fill="#FFF">50</text></svg><span>Free up to <b>50 kWh a day</b>. After that, a small cost.</span></li>
       </ul>
-      <p class="tip" style="margin:0 22px 18px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Start each evening with a full battery, and you need very little from the grid at night.</span></p>
+      <p class="tip" style="margin:0 22px 18px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Charge your battery in any weather conditions, so it is ready to run your home on your own stored power and avoid the grid as much as possible.</span></p>
     </div>
     <div class="tour-nav"><label class="btn ok" for="tour-3" tabindex="0">I understand</label></div>
     <label class="back" for="tour-1" tabindex="0">Go back</label>
@@ -439,7 +465,6 @@ a{color:var(--ink)}
         <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#0B7A5E"/><path d="M9 15l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span>A <b>tiny trickle</b> from the grid is normal and OK: up to <b>0.03 kWh each hour</b>.</span></li>
         <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#E58A00"/><rect x="13.5" y="7" width="3" height="10" rx="1.5" fill="#FFF"/><circle cx="15" cy="21.5" r="2" fill="#FFF"/></svg><span>Your battery can only give <b>so much power at one time</b>. If many big appliances are on together, the extra may come from the grid. <b>Check your battery's app</b> to see how much power (kW) it can give.</span></li>
       </ul>
-      <p class="tip" style="margin:0 22px 18px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>When your battery covers 6pm to 9pm, the highest prices of the day hardly reach your bill.</span></p>
     </div>
     <div class="tour-nav"><label class="btn ok" for="tour-4" tabindex="0">I understand</label></div>
     <label class="back" for="tour-2" tabindex="0">Go back</label>
@@ -450,21 +475,17 @@ a{color:var(--ink)}
     <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-sell on"></i><i class="if-bind"></i><i></i><i></i></div>
     <div class="feat">
       <div class="hero h-sell">
-        <div><div class="kick">Saving 3 · Feed-in</div><div class="huge">10c</div><div class="when">per kWh export rate, 6pm to 9pm</div></div>
+        <div><div class="kick">Saving 3 · Feed-in</div><div class="huge">10c</div><div class="when">per kWh, 6pm to 9pm</div></div>
         <svg viewBox="0 0 96 96" aria-hidden="true"><rect x="11.8" y="24.9" width="10.4" height="6.0" rx="2" fill="#13263B"/><rect x="4" y="30" width="26" height="46" rx="5.7" fill="#FFFFFF" stroke="#13263B" stroke-width="3"/><rect x="7.6" y="53.5" width="18.7" height="19.3" rx="2.6" fill="#2EDB8F"/><circle cx="12.6" cy="41.0" r="1.9" fill="#13263B"/><circle cx="21.4" cy="41.0" r="1.9" fill="#13263B"/><path d="M11.8 45.6q5.2 4.6 10.4 0" stroke="#13263B" stroke-width="2.1" fill="none" stroke-linecap="round"/><path d="M34 54h12M42 47l7 7-7 7" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="72" cy="54" r="22" fill="#D9DEE5" stroke="#8E96A3" stroke-width="3.1"/><circle cx="72" cy="54" r="15.8" fill="none" stroke="#B3BAC5" stroke-width="1.5"/><text x="72" y="59.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.0" font-weight="800" fill="#3F4B59">10c</text><path d="M59.9 44.1q4.4 -5.5 11.0 -6.6" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".8"/></svg>
       </div>
-      <p class="if-sell" style="padding:18px 22px 0;margin:0">Send your <b>excess</b> battery power to the grid. <b>You are always in control of how much you sell</b>, whether you connect your battery or not. This is what we pay:</p>
-      <div class="rates" style="margin-top:14px">
-        <div class="best"><span><b>6pm to 9pm</b>, first 15 kWh<br>2c normal rate + 8c Super Export bonus</span><b class="v">10c</b></div>
-        <div><span><b>6pm to 9pm</b>, after 15 kWh</span><b class="v">2c</b></div>
-        <div><span><b>4pm to 6pm</b> and <b>9pm to 11pm</b></span><b class="v">2c</b></div>
-        <div class="none"><span><b>All other times</b></span><b class="v">0c</b></div>
+      <p class="fi-intro">Sell your <b>excess</b> battery power to the grid. <b>You choose how much.</b></p>
+      <div class="fi">
+        <div class="fi-row fi-top"><span class="fi-c">10c</span><span class="fi-t"><b>6pm to 9pm</b><small>First 15 kWh each day. Includes an 8c Super Export bonus.</small></span></div>
+        <div class="fi-row"><span class="fi-c fi-lo">2c</span><span class="fi-t"><b>4pm to 6pm and 9pm to 11pm</b><small>Also after your first 15 kWh, 6pm to 9pm.</small></span></div>
+        <div class="fi-row"><span class="fi-c fi-no">0c</span><span class="fi-t"><b>All other times</b><small>Your solar powers your home first, then charges your battery.</small></span></div>
       </div>
-      <ul class="pts" style="padding-top:0">
-        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="7" fill="#F2A900"/><path d="M24.5 15.0L28.0 15.0M21.7 21.7L24.2 24.2M15.0 24.5L15.0 28.0M8.3 21.7L5.8 24.2M5.5 15.0L2.0 15.0M8.3 8.3L5.8 5.8M15.0 5.5L15.0 2.0M21.7 8.3L24.2 5.8" stroke="#F2A900" stroke-width="2.2" stroke-linecap="round"/></svg><span>Outside 4pm to 11pm we do not pay. That is OK: your <b>solar powers your home first</b>, then <b>charges your battery</b>.</span></li>
-      </ul>
-      <p class="tip" style="margin:0 22px 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Your excess power earns you money, instead of just sitting in your battery.</span></p>
-      <p class="warn"><b>Only sell what you do not need.</b> Keep enough battery for your home. Power from the grid costs extra, so do not sell so much that you have to buy it back.</p>
+      <p class="tip" style="margin:0 22px 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Your excess battery power can earn additional credits, instead of just sitting in your battery.</span></p>
+      <p class="warn"><b>Only sell what you do not need.</b> Keep enough battery for your home, so you do not have to buy grid power back.</p>
     </div>
     <div class="tour-nav"><label class="btn ok" for="tour-5" tabindex="0">I understand</label></div>
     <label class="back" for="tour-3" tabindex="0">Go back</label>
@@ -495,36 +516,39 @@ a{color:var(--ink)}
     <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-sell done"></i><i class="if-bind done"></i><i class="on"></i><i></i></div>
     <div class="feat">
       <div class="hero h-setup">
-        <div><div class="kick">Last step, very important</div><div class="mid">Set a timer on your battery</div></div>
+        <div><div class="kick">Last step</div><div class="mid">Set up battery scheduling</div></div>
         <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="22" cy="22" r="11" fill="#F2A900"/><circle cx="74" cy="22" r="11" fill="#F2A900"/><path d="M28 84l-6 8M68 84l6 8" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/><circle cx="48" cy="54" r="32" fill="#FFFFFF" stroke="#F2A900" stroke-width="5"/><path d="M48 34v20l13 8" stroke="#13263B" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="48" cy="54" r="3.5" fill="#13263B"/><path d="M48 26v4M48 78v4M20 54h4M72 54h4" stroke="#13263B" stroke-width="3" stroke-linecap="round"/></svg>
       </div>
-      <div class="alert">
-        <b class="big">Your battery will not do this by itself.</b>
-        <p>Most batteries only charge from your <b>solar panels</b>. To get the <b>free power</b>, you must tell your battery to also charge from the grid at <b>12pm to 3pm</b>.</p>
-        <p>This is called <b>setting a schedule</b>, like setting a timer. You can set it to <b>repeat every day</b>, or control it yourself each day.</p>
+      <p class="sch-one">Your battery will <b>not</b> charge from the grid by itself. It needs to be <b>programmed</b> to use the free power.</p>
+      <div class="sch-set">
+        <span class="sch-h">What to set</span>
+        <div class="sch-row"><span class="sch-tm">12pm to 3pm</span><span>Charge from the grid, up to 100%</span></div>
+        <div class="sch-row if-sell"><span class="sch-tm">6pm to 9pm</span><span>Sell your excess power</span></div>
       </div>
-      <div class="set" style="padding-top:16px"><span class="c1">Charge from the grid: 12pm to 3pm</span><span class="c2 if-sell">Sell excess power: 6pm to 9pm</span></div>
-      <p class="tip" style="margin:0 22px 16px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Set it once, and your battery does the work for you every day.</span></p>
 
-      <div class="fb">If you connected (bound) your battery:</div>
-      <ul class="pts if-bind">
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="8" y="2" width="15" height="26" rx="3" fill="#0B7A5E"/><rect x="10" y="5" width="11" height="17" rx="1.5" fill="#E2F4EC"/><rect x="12.5" y="9" width="6" height="10" rx="1.5" fill="none" stroke="#0B7A5E" stroke-width="1.6"/><rect x="13.8" y="13" width="3.4" height="4.6" fill="#2EDB8F"/><circle cx="15.5" cy="25" r="1.3" fill="#E2F4EC"/></svg><span>You are <b>binding</b> your battery, so you use <b>our app</b>. It <b>takes over from your battery's own app</b> for when your battery charges and discharges.</span></li>
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="14" font-weight="800" fill="#FFF">3</text></svg><span>Our app has <b>3 modes</b>:<br><b>Self-consumption</b> (default): your battery powers your home.<br><b>Schedule mode:</b> you set the timer yourself.<br><b>Auto mode:</b> We charge your battery for you. You can also choose to let us sell for you, within limits you set. <b>You always decide how much to sell.</b></span></li>
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#0B7A5E"/><path d="M12 9v12l9-6z" fill="#FFF"/></svg><span><b>Your steps:</b><br>1. <b>Join the VPP</b> (bind your battery) during the online sign-up, or later in our app.<br>2. Then <b>watch our short video</b>. It explains the 3 modes and shows you how to set your timer.</span></li>
-      </ul>
-      <div class="if-bind"><div class="links">
-        <a href="https://www.globirdenergy.com.au/join-vpp/">Step 1: How to join the VPP (bind your battery)</a>
-        <a href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/">Step 2: Watch how to use our app</a>
-      </div></div>
+      <div class="fb">If you use our app (binding):</div>
+      <div class="if-bind">
+        <p class="sch-sub">How we help you set it up</p>
+        <ul class="pts" style="padding-top:0">
+          <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="8" y="2" width="15" height="26" rx="3" fill="#0B7A5E"/><rect x="10" y="5" width="11" height="17" rx="1.5" fill="#E2F4EC"/><rect x="12.5" y="9" width="6" height="10" rx="1.5" fill="none" stroke="#0B7A5E" stroke-width="1.6"/><rect x="13.8" y="13" width="3.4" height="4.6" fill="#2EDB8F"/><circle cx="15.5" cy="25" r="1.3" fill="#E2F4EC"/></svg><span>Our app <b>takes over scheduling</b> from your battery's own app.</span></li>
+          <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="14" font-weight="800" fill="#FFF">3</text></svg><span><b>3 modes:</b> Self-consumption (default), Schedule (you set the times), or Auto (we charge it for you, and can also sell within limits you set).</span></li>
+        </ul>
+        <div class="sch-btns">
+          <a class="sb" href="https://www.globirdenergy.com.au/join-vpp/"><b>Step 1</b>Join the VPP (bind your battery)<small>During sign-up, or later in our app</small></a>
+          <a class="sb" href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/"><b>Step 2</b>Watch the setup video<small>Shows the 3 modes and how to set your times</small></a>
+        </div>
+      </div>
 
-      <div class="fb">If you did not connect your battery:</div>
-      <ul class="pts if-nobind">
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><path d="M4 6c4-2 8-2 11 1 3-3 7-3 11-1v19c-4-2-8-2-11 1-3-3-7-3-11-1z" fill="#FFFFFF" stroke="#1F6FB2" stroke-width="2"/><path d="M15 7v19" stroke="#1F6FB2" stroke-width="2"/><path d="M7 11h5M7 15h5M18 11h5M18 15h5" stroke="#1F6FB2" stroke-width="1.6" stroke-linecap="round"/></svg><span>Set it in <b>your battery's own app</b> using our <b>step-by-step guides</b> for most brands. You can also find instructions from your battery manufacturer or online.</span></li>
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><path d="M8 26c1-5 13-5 14 0" fill="#F2A900"/><circle cx="15" cy="15" r="5" fill="#F3C9A0"/><path d="M9 13a6 6 0 0 1 12 0z" fill="#F2A900"/><rect x="8" y="12" width="14" height="2" rx="1" fill="#F2A900"/></svg><span>Your <b>installer</b> can also help you set it to charge from the grid 12pm to 3pm<span class="if-sell">, and send power out 6pm to 9pm</span>.</span></li>
-      </ul>
-      <div class="if-nobind"><div class="links">
-        <a href="https://www.globirdenergy.com.au/battery-scheduling/">Our step-by-step battery guides</a>
-      </div></div>
+      <div class="fb">If you use your battery's own app:</div>
+      <div class="if-nobind">
+        <p class="sch-sub">How we help you set it up</p>
+        <div class="sch-btns">
+          <a class="sb" href="https://www.globirdenergy.com.au/battery-scheduling/"><b>Our step-by-step guides</b>Set up scheduling in your battery's own app<small>Covers most brands</small></a>
+        </div>
+        <ul class="pts">
+          <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><path d="M8 26c1-5 13-5 14 0" fill="#F2A900"/><circle cx="15" cy="15" r="5" fill="#F3C9A0"/><path d="M9 13a6 6 0 0 1 12 0z" fill="#F2A900"/><rect x="8" y="12" width="14" height="2" rx="1" fill="#F2A900"/></svg><span>Brand not covered? Your <b>installer</b> or <b>battery manufacturer</b> can help, or search online for your model.</span></li>
+        </ul>
+      </div>
     </div>
     <div class="tour-nav"><label class="btn ok" for="tour-7" tabindex="0">See my next steps</label></div>
     <span class="if-bind"><label class="back" for="tour-5" tabindex="0">Go back</label></span><span class="if-nobind"><span class="if-sell"><label class="back" for="tour-4" tabindex="0">Go back</label></span><span class="if-nosell"><label class="back" for="tour-3" tabindex="0">Go back</label></span></span>
@@ -572,11 +596,11 @@ a{color:var(--ink)}
     <label class="btn refer-btn" for="refer" tabindex="0"><span class="open-lbl">Refer friends and family</span><span class="close-lbl">Hide referral details</span><small>Get $50 for every person who joins</small></label>
     <div class="refer-info">
       <p class="big">You get $50. They get $50.</p>
-      <p>For <b>every friend or family member</b> who joins us, <b>you get $50 off your bill</b> and <b>they get $50 off theirs</b>.</p>
+      <p>For <b>every friend or family member</b> who joins us after you, <b>you get $50 off your bill</b> and <b>they get $50 off theirs</b>.</p>
       <ol>
-        <li>Email them a link to our website: <a href="https://www.globirdenergy.com.au">globirdenergy.com.au</a></li>
-        <li>Or email Darius to connect them with an agent:<br><span class="mail">darius@globirdenergy.com.au</span></li>
-        <li>Or they can call <b>133 456</b>. Any agent can sign them up and add your $50.</li>
+        <li>Send them a link to join through <b>your app</b>.</li>
+        <li>Or connect them with an agent:<br><span class="mail">darius@globirdenergy.com.au</span></li>
+        <li>Or they can call <b>133 456</b>. Any agent can sign them up. They just need to <b>tell us you referred them</b>.</li>
       </ol>
     </div>
 
