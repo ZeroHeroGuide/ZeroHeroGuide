@@ -295,6 +295,9 @@ a{color:var(--ink)}
 .sb{position:relative;padding-right:44px}
 .sb::after{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.4rem}
 .if-nobind .pts{padding-top:0}
+.sch-row{grid-template-columns:132px 1fr!important;gap:14px!important;align-items:center}
+.sch-tm{display:block;text-align:center;white-space:nowrap;box-sizing:border-box;width:100%}
+@media (max-width:420px){.sch-row{grid-template-columns:118px 1fr!important;gap:12px!important}}
 </style>
 </head>
 <body>
@@ -523,7 +526,7 @@ a{color:var(--ink)}
       <div class="sch-set">
         <span class="sch-h">What to set</span>
         <div class="sch-row"><span class="sch-tm">12pm to 3pm</span><span>Charge from the grid, up to 100%</span></div>
-        <div class="sch-row if-sell"><span class="sch-tm">6pm to 9pm</span><span>Sell your excess power</span></div>
+        <div class="if-sell"><div class="sch-row"><span class="sch-tm">6pm to 9pm</span><span>Sell your excess power</span></div></div>
       </div>
 
       <div class="fb">If you use our app (binding):</div>
@@ -534,8 +537,8 @@ a{color:var(--ink)}
           <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="14" font-weight="800" fill="#FFF">3</text></svg><span><b>3 modes:</b> Self-consumption (default), Schedule (you set the times), or Auto (we charge it for you, and can also sell within limits you set).</span></li>
         </ul>
         <div class="sch-btns">
-          <a class="sb" href="https://www.globirdenergy.com.au/join-vpp/"><b>Step 1</b>Join the VPP (bind your battery)<small>During sign-up, or later in our app</small></a>
-          <a class="sb" href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/"><b>Step 2</b>Watch the setup video<small>Shows the 3 modes and how to set your times</small></a>
+          <a class="sb" href="https://www.globirdenergy.com.au/join-vpp/" target="_blank" rel="noopener"><b>Step 1</b>Join the VPP (bind your battery)<small>During sign-up, or later in our app</small></a>
+          <a class="sb" href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/" target="_blank" rel="noopener"><b>Step 2</b>Watch the setup video<small>Shows the 3 modes and how to set your times</small></a>
         </div>
       </div>
 
@@ -543,7 +546,7 @@ a{color:var(--ink)}
       <div class="if-nobind">
         <p class="sch-sub">How we help you set it up</p>
         <div class="sch-btns">
-          <a class="sb" href="https://www.globirdenergy.com.au/battery-scheduling/"><b>Our step-by-step guides</b>Set up scheduling in your battery's own app<small>Covers most brands</small></a>
+          <a class="sb" href="https://www.globirdenergy.com.au/battery-scheduling/" target="_blank" rel="noopener"><b>Our step-by-step guides</b>Set up scheduling in your battery's own app<small>Covers most brands</small></a>
         </div>
         <ul class="pts">
           <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><path d="M8 26c1-5 13-5 14 0" fill="#F2A900"/><circle cx="15" cy="15" r="5" fill="#F3C9A0"/><path d="M9 13a6 6 0 0 1 12 0z" fill="#F2A900"/><rect x="8" y="12" width="14" height="2" rx="1" fill="#F2A900"/></svg><span>Brand not covered? Your <b>installer</b> or <b>battery manufacturer</b> can help, or search online for your model.</span></li>
@@ -557,8 +560,8 @@ a{color:var(--ink)}
   <!-- TOUR 7: DONE -->
   <div class="scr s-t7">
     <h1>That's ZeroHero in a nutshell</h1>
-    <p class="if-nobind">Need help setting your battery's timer? <a href="https://www.globirdenergy.com.au/battery-scheduling/"><b>Our step-by-step battery guides</b></a></p>
-    <p class="if-bind">Need help setting your battery's timer? <a href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/"><b>Watch: how to use our app</b></a></p>
+    <p class="if-nobind">Need help setting your battery's timer? <a href="https://www.globirdenergy.com.au/battery-scheduling/" target="_blank" rel="noopener"><b>Our step-by-step battery guides</b></a></p>
+    <p class="if-bind">Need help setting your battery's timer? <a href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/" target="_blank" rel="noopener"><b>Watch: how to use our app</b></a></p>
     <div class="done-list">
       <div><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#0B7A5E"/><path d="M8 14l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span><span class="if-bind">Schedule your battery in our app</span><span class="if-nobind">Schedule your battery in its own app</span></span></div>
       <div><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#0B7A5E"/><path d="M8 14l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>Free power 12pm to 3pm (up to 50 kWh)</div>
@@ -607,7 +610,7 @@ a{color:var(--ink)}
     <div class="convince">
       <b>Still not convinced?</b>
       <p>Hear it from customers already saving with ZeroHero.</p>
-      <a class="btn no" href="https://www.globirdenergy.com.au/energy-saver/zerohero-testimonials/">Watch customer testimonials</a>
+      <a class="btn no" href="https://www.globirdenergy.com.au/energy-saver/zerohero-testimonials/" target="_blank" rel="noopener">Watch customer testimonials</a>
     </div>
     <label class="back" for="tour-1" tabindex="0">See it all again</label>
   </div>
