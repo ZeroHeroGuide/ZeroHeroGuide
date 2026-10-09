@@ -127,7 +127,7 @@ a{color:var(--ink)}
 
 /* final */
 .done-list{display:grid;gap:8px;margin:0 0 22px}
-.done-list>div:not(.if-sell),.done-list .dli{margin:0;display:flex;gap:10px;align-items:center;font-weight:700;font-size:1.1rem}
+.done-list>div:not(.dlw),.done-list .dli{margin:0;display:flex;gap:10px;align-items:center;font-weight:700;font-size:1.1rem}
 .done-list svg{width:28px;height:28px;flex:none}
 .join{background:var(--ink);color:#FFFFFF;border-radius:16px;padding:20px;margin-bottom:14px}
 .join b{display:block;font-size:1.35rem;margin-bottom:6px}
@@ -156,24 +156,17 @@ a{color:var(--ink)}
 .app:has(#start-no:checked) .s-welcome{display:block}
 .app:has(#start-yes:checked):has(#bind-unset:checked) .s-q1{display:block}
 .app:has(#bind-help:checked) .s-q1h{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-unset:checked) .s-q2{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-help:checked) .s-q2h{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-no:checked):has(#tour-0:checked) .s-q2n{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-yes:checked):has(#tour-0:checked) .s-t1{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-yes:checked, #sell-no:checked):has(#tour-1:checked) .s-t1{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-yes:checked, #sell-no:checked):has(#tour-2:checked) .s-t2{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-yes:checked, #sell-no:checked):has(#tour-3:checked) .s-t3{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-yes:checked):has(#tour-4:checked) .s-t4{display:block}
-.app:has(#bind-yes:checked):has(#sell-no:checked):has(#tour-4:checked) .s-t5{display:block}
-.app:has(#bind-no:checked):has(#sell-no:checked):has(#tour-4:checked) .s-t6{display:block}
-.app:has(#bind-yes:checked):has(#sell-yes:checked, #sell-no:checked):has(#tour-5:checked) .s-t5{display:block}
-.app:has(#bind-no:checked):has(#sell-yes:checked, #sell-no:checked):has(#tour-5:checked) .s-t6{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-yes:checked, #sell-no:checked):has(#tour-6:checked) .s-t6{display:block}
-.app:has(#bind-yes:checked, #bind-no:checked):has(#sell-yes:checked, #sell-no:checked):has(#tour-7:checked) .s-t7{display:block}
+.app:has(#bind-yes:checked, #bind-no:checked):has(#tour-0:checked, #tour-1:checked) .s-free{display:block}
+.app:has(#bind-yes:checked, #bind-no:checked):has(#tour-2:checked) .s-one{display:block}
+.app:has(#bind-yes:checked, #bind-no:checked):has(#tour-3:checked) .s-sell{display:block}
+.app:has(#bind-yes:checked):has(#tour-4:checked) .s-crit{display:block}
+.app:has(#bind-no:checked):has(#tour-4:checked) .s-day{display:block}
+.app:has(#bind-yes:checked, #bind-no:checked):has(#tour-5:checked) .s-day{display:block}
+.app:has(#bind-yes:checked, #bind-no:checked):has(#tour-6:checked) .s-prog{display:block}
+.app:has(#bind-yes:checked, #bind-no:checked):has(#tour-7:checked) .s-final{display:block}
+.app:has(#bind-yes:checked, #bind-no:checked):has(#tour-8:checked) .s-sched{display:block}
 .app:has(#bind-yes:checked) .if-bind{display:revert}
 .app:has(#bind-no:checked) .if-nobind{display:revert}
-.app:has(#sell-yes:checked) .if-sell{display:revert}
-.app:has(#sell-no:checked) .if-nosell{display:revert}
 .app:has(#refer:checked) .refer-info{display:block}
 .app:has(#refer:checked) .open-lbl{display:none}
 .app:has(#refer:checked) .close-lbl{display:inline}
@@ -213,15 +206,15 @@ a{color:var(--ink)}
 .step{text-align:center}
 .brands{justify-content:center}
 .help{text-align:left}
-.s-t7 h1{text-align:center}
+.s-final h1{text-align:center}
 
 .join p b{display:inline;font-size:inherit;margin:0}
 .anybrand{font-size:.95rem;padding:6px 14px}
 .back{display:table;margin:22px auto 0}
 .set{justify-content:center}
-.s-t1 .feat>p.small{text-align:center;padding-bottom:14px!important}
+.s-day .feat>p.small{text-align:center;padding-bottom:14px!important}
 .done-list{width:fit-content;max-width:100%;margin:0 auto 22px}
-.s-t7>p{text-align:center}
+.s-final>p{text-align:center}
 .loop{display:flex;gap:12px;align-items:center;justify-content:center;margin:4px 18px 12px;padding:12px 16px;border:2px dashed var(--go);border-radius:16px;background:var(--gobg);color:var(--ink);text-decoration:none;font-size:1rem;line-height:1.35}
 .loop svg{width:40px;height:40px;flex:none}
 .loop b{font-size:1.2rem;color:var(--go)}
@@ -298,14 +291,19 @@ a{color:var(--ink)}
 .sch-row{grid-template-columns:132px 1fr!important;gap:14px!important;align-items:center}
 .sch-tm{display:block;text-align:center;white-space:nowrap;box-sizing:border-box;width:100%}
 @media (max-width:420px){.sch-row{grid-template-columns:118px 1fr!important;gap:12px!important}}
+.sched-btn{margin:0 0 16px;background:var(--card);color:var(--ink);border-color:var(--go);flex-direction:column;gap:2px;min-height:78px}
+.sched-btn span{font-size:1.2rem}
+.sched-btn span::after{content:" \2192";color:var(--go)}
+.sched-btn small{font-size:.95rem;font-weight:500;color:var(--muted)}
+.s-prog .pop svg{width:88px;height:88px}
+.s-prog .pop h2{margin-top:6px}
 </style>
 </head>
 <body>
 <div class="app">
   <input class="r" autocomplete="off" type="radio" name="start" id="start-no" checked><input class="r" autocomplete="off" type="radio" name="start" id="start-yes">
   <input class="r" autocomplete="off" type="radio" name="bind" id="bind-unset" checked><input class="r" autocomplete="off" type="radio" name="bind" id="bind-yes"><input class="r" autocomplete="off" type="radio" name="bind" id="bind-no"><input class="r" autocomplete="off" type="radio" name="bind" id="bind-help">
-  <input class="r" autocomplete="off" type="radio" name="sell" id="sell-unset" checked><input class="r" autocomplete="off" type="radio" name="sell" id="sell-yes"><input class="r" autocomplete="off" type="radio" name="sell" id="sell-no"><input class="r" autocomplete="off" type="radio" name="sell" id="sell-help">
-  <input class="r" autocomplete="off" type="radio" name="tour" id="tour-0" checked><input class="r" autocomplete="off" type="radio" name="tour" id="tour-1"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-2"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-3"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-4"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-5"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-6"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-7">
+  <input class="r" autocomplete="off" type="radio" name="tour" id="tour-0" checked><input class="r" autocomplete="off" type="radio" name="tour" id="tour-1"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-2"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-3"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-4"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-5"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-6"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-7"><input class="r" autocomplete="off" type="radio" name="tour" id="tour-8">
   <input class="r" autocomplete="off" type="checkbox" id="refer">
 
   <!-- WELCOME -->
@@ -313,14 +311,14 @@ a{color:var(--ink)}
     <div class="pic"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="92" cy="26" r="15" fill="#F2A900"/><path d="M111.0 26.0L116.0 26.0M105.4 39.4L109.0 43.0M92.0 45.0L92.0 50.0M78.6 39.4L75.0 43.0M73.0 26.0L68.0 26.0M78.6 12.6L75.0 9.0M92.0 7.0L92.0 2.0M105.4 12.6L109.0 9.0" stroke="#F2A900" stroke-width="4" stroke-linecap="round"/><path d="M80.3 22.7h10.2l-1.2 5.1h-7.8zM93.5 22.7h10.2l-1.2 5.1h-7.8z" fill="#13263B"/><path d="M90.5 23.6h3.0" stroke="#13263B" stroke-width="1.2"/><path d="M86.3 31.7q5.7 4.5 11.4 0" stroke="#13263B" stroke-width="2.0" fill="none" stroke-linecap="round"/><ellipse cx="104" cy="72" rx="13" ry="11" fill="#6FA34A"/><ellipse cx="96" cy="80" rx="9" ry="7" fill="#7FB55A"/><rect x="101" y="78" width="5" height="28" fill="#8A6A4A"/><path d="M8 66 46 38l38 28z" fill="#C2301A"/><path d="M17 62 42 43l6 5-24 18z" fill="#1F3B66"/><path d="M25 57l6 5M32 52l6 5M39 47l6 5M20 64l24-18" stroke="#8FB6E8" stroke-width="1.5"/><rect x="14" y="66" width="64" height="40" fill="#F7E9D2"/><rect x="20" y="74" width="14" height="12" rx="1" fill="#BFE3F7" stroke="#13263B" stroke-width="2"/><rect x="40" y="82" width="12" height="24" rx="1" fill="#8A5F00"/><rect x="63.9" y="77.8" width="5.2" height="2.6" rx="2" fill="#13263B"/><rect x="60" y="80" width="13" height="20" rx="2.9" fill="#FFFFFF" stroke="#13263B" stroke-width="2.2"/><rect x="61.8" y="82.6" width="9.4" height="16.0" rx="1.3" fill="#2EDB8F"/><path d="M2 107h116" stroke="#6FA34A" stroke-width="6" stroke-linecap="round"/></svg></div>
     <h1>Your ZeroHero plan</h1>
     <p>Thank you for your time on the phone today.</p>
-    <p>Answer <b>2 easy questions</b>. Then we show you how ZeroHero helps you save money with your battery every day.</p>
+    <p>Answer <b>1 quick question</b>. Then we show you how ZeroHero helps you save money with your battery every day.</p>
     <p class="tip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>With solar and a battery, the less you use the grid, the less grid prices matter to you.</span></p>
     <div class="answers"><label class="btn yes" for="start-yes" tabindex="0">Start</label></div>
   </div>
 
   <!-- Q1 BIND -->
   <div class="scr s-q1">
-    <div class="step">Question 1 of 2</div>
+    <div class="step">Quick question</div>
     <div class="pic"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="22.0" y="24.3" width="16.0" height="9.1" rx="2" fill="#13263B"/><rect x="10" y="32" width="40" height="70" rx="8.8" fill="#FFFFFF" stroke="#13263B" stroke-width="4"/><rect x="15.6" y="67.7" width="28.8" height="29.4" rx="4.0" fill="#2EDB8F"/><circle cx="23.2" cy="48.8" r="3.0" fill="#13263B"/><circle cx="36.8" cy="48.8" r="3.0" fill="#13263B"/><path d="M22.0 55.8q8.0 7.0 16.0 0" stroke="#13263B" stroke-width="2.8" fill="none" stroke-linecap="round"/><rect x="76" y="26" width="34" height="62" rx="7" fill="#13263B"/><rect x="80" y="34" width="26" height="44" rx="3" fill="#E2F4EC"/><path d="M86 56l5 5 10-11" stroke="#0B7A5E" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M54 66q10-16 20-6" stroke="#F2A900" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="2 7"/><path d="M66 40l-6 9h5l-3 8 8-10h-5l3-7z" fill="#F2A900"/></svg></div>
     <h2>How would you like to control your battery?</h2>
     <p class="anybrand">ZeroHero works with <b>any home battery brand</b>.</p>
@@ -337,7 +335,7 @@ a{color:var(--ink)}
   </div>
 
   <div class="scr s-q1h">
-    <div class="step">Question 1 of 2</div>
+    <div class="step">Quick question</div>
     <h2>What is the difference?</h2>
     <p class="same">Same <b>3 main savings</b> either way.<br>Our app adds <b>2 optional extras</b>.</p>
     <div class="cmp">
@@ -352,52 +350,88 @@ a{color:var(--ink)}
     <label class="back" for="bind-unset" tabindex="0">Go back</label>
   </div>
 
-  <!-- Q2 SELL -->
-  <div class="scr s-q2">
-    <div class="step">Question 2 of 2</div>
-    <div class="pic"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="15.6" y="31.6" width="12.8" height="7.5" rx="2" fill="#13263B"/><rect x="6" y="38" width="32" height="58" rx="7.0" fill="#FFFFFF" stroke="#13263B" stroke-width="4"/><rect x="10.5" y="67.6" width="23.0" height="24.4" rx="3.2" fill="#2EDB8F"/><circle cx="16.6" cy="51.9" r="2.4" fill="#13263B"/><circle cx="27.4" cy="51.9" r="2.4" fill="#13263B"/><path d="M15.6 57.7q6.4 5.8 12.8 0" stroke="#13263B" stroke-width="2.8" fill="none" stroke-linecap="round"/><path d="M44 66h16M54 58l8 8-8 8" stroke="#1F6FB2" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="90" cy="66" r="24" fill="#D9DEE5" stroke="#8E96A3" stroke-width="3.4"/><circle cx="90" cy="66" r="17.3" fill="none" stroke="#B3BAC5" stroke-width="1.7"/><text x="90" y="71.4" text-anchor="middle" font-family="Arial,sans-serif" font-size="15.0" font-weight="800" fill="#3F4B59">10c</text><path d="M76.8 55.2q4.8 -6.0 12.0 -7.2" stroke="#FFFFFF" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".8"/><path d="M108 30Q108 36 114 36Q108 36 108 42Q108 36 102 36Q108 36 108 30z" fill="#F2A900"/><path d="M72 34Q72 38 76 38Q72 38 72 42Q72 38 68 38Q72 38 72 34z" fill="#F2A900"/></svg></div>
-    <h2>Do you want to sell your excess battery power at night?</h2>
-    <p>It is <b>your choice</b>. We will never make you sell.</p>
-    <div class="answers">
-      <label class="btn yes" for="sell-yes" tabindex="0">Yes, I want to sell excess battery power</label>
-      <label class="btn no" for="sell-no" tabindex="0">No, keep it for my home</label>
-      <label class="btn unsure" for="sell-help" tabindex="0">I am not sure</label>
+  <!-- FREE -->
+  <div class="scr s-free">
+    <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i class="if-bind"></i><i></i><i></i></div>
+    <div class="feat">
+      <div class="hero h-free">
+        <div><div class="kick">Saving 1</div><div class="huge">FREE</div><div class="when">12pm to 3pm local time, every day</div></div>
+        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="24" fill="#FF8A00"/><path d="M78.0 48.0L90.0 48.0M69.2 69.2L77.7 77.7M48.0 78.0L48.0 90.0M26.8 69.2L18.3 77.7M18.0 48.0L6.0 48.0M26.8 26.8L18.3 18.3M48.0 18.0L48.0 6.0M69.2 26.8L77.7 18.3" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/><path d="M29.3 42.7h16.3l-1.9 8.2h-12.5zM50.4 42.7h16.3l-1.9 8.2h-12.5z" fill="#13263B"/><path d="M45.6 44.2h4.8" stroke="#13263B" stroke-width="1.9"/><path d="M38.9 57.1q9.1 7.2 18.2 0" stroke="#13263B" stroke-width="3.1" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <ul class="pts">
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="12.2" y="3.6" width="5.6" height="2.9" rx="2" fill="#13263B"/><rect x="8" y="6" width="14" height="22" rx="3.1" fill="#FFFFFF" stroke="#13263B" stroke-width="2"/><rect x="10.0" y="17.2" width="10.1" height="9.2" rx="1.4" fill="#F2A900"/><circle cx="12.6" cy="11.3" r="1.2" fill="#13263B"/><circle cx="17.4" cy="11.3" r="1.2" fill="#13263B"/><path d="M12.2 13.5q2.8 2.2 5.6 0" stroke="#13263B" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span>Your battery usually charges from <b>solar only</b>. If solar is not enough, use this free time to <b>charge it from the grid</b>. Set a schedule (timer) for this.</span></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="2" width="22" height="26" rx="3" fill="#FFFFFF" stroke="#13263B" stroke-width="2"/><path d="M4 8h22" stroke="#13263B" stroke-width="2"/><circle cx="8" cy="5" r="1.2" fill="#13263B"/><circle cx="15" cy="18" r="7" fill="#BFE3F7" stroke="#13263B" stroke-width="2"/><path d="M10 19q2.5-2 5 0t5 0" stroke="#1F6FB2" stroke-width="1.6" fill="none"/></svg><span>Run your <b>big appliances</b> now: washing machine, dryer and dishwasher. Also <b>hot water</b> or a <b>pool pump</b> on a timer, and charging an <b>electric car</b>.</span></li>
+        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#8A5F00"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="12" font-weight="800" fill="#FFF">50</text></svg><span>Free up to <b>50 kWh a day</b>. After that, a small cost.</span></li>
+      </ul>
+      <p class="tip" style="margin:0 22px 18px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Charge your battery in any weather conditions, so it is ready to run your home on your own stored power and avoid the grid as much as possible.</span></p>
     </div>
-    <label class="back" for="bind-unset" tabindex="0">Go back</label>
+    <div class="tour-nav"><label class="btn ok" for="tour-2" tabindex="0">I understand</label></div>
+    <label class="back" for="bind-unset" tabindex="0">Change my answer</label>
   </div>
 
-  <div class="scr s-q2h">
-    <div class="step">Question 2 of 2</div>
-    <h2>What does "sell" mean?</h2>
-    <div class="box help">
-      <p>If your battery has <b>more power than your home needs</b>, you can send the excess to the grid between <b>6pm and 9pm</b>.</p>
-      <p>We pay you <b>10 cents per kWh</b>, for up to <b>15 kWh a day</b>. You choose how much.</p>
-      <p class="small" style="color:var(--ink)">This is your <b>feed-in</b> (export) rate. A <b>kWh</b> is the unit of power on your bill.</p>
-      <p>If your battery is small, or you use a lot of power at night, pick <b>No</b>.</p>
+  <!-- ONE -->
+  <div class="scr s-one">
+    <div class="dots" aria-hidden="true"><i class="done"></i><i class="on"></i><i></i><i class="if-bind"></i><i></i><i></i></div>
+    <div class="feat">
+      <div class="hero h-hero">
+        <div><div class="kick">Saving 2</div><div class="huge">$1 a day</div><div class="when">6pm to 9pm local time, every day</div><div class="yr">Up to $365 a year</div></div>
+        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="50" r="36" fill="#F5C542" stroke="#B8860B" stroke-width="5.0"/><circle cx="48" cy="50" r="25.9" fill="none" stroke="#E0A82E" stroke-width="2.5"/><text x="48" y="60.8" text-anchor="middle" font-family="Arial,sans-serif" font-size="30.0" font-weight="800" fill="#6B4A00">$1</text><path d="M28.2 33.8q7.2 -9.0 18.0 -10.8" stroke="#FFFFFF" stroke-width="3.6" fill="none" stroke-linecap="round" opacity=".8"/><path d="M84 6Q84 14 92 14Q84 14 84 22Q84 14 76 14Q84 14 84 6z" fill="#FFFFFF"/><path d="M12 15Q12 20 17 20Q12 20 12 25Q12 20 7 20Q12 20 12 15z" fill="#FFFFFF"/></svg>
+      </div>
+      <ul class="pts">
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="5" width="22" height="20" rx="3" fill="#0B7A5E"/><path d="M8 11h14M8 16h10M8 21h7" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/></svg><span>The $1 is there to <b>help pay your daily supply charge</b>, the fixed amount on your bill, applied per day.</span></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="12.2" y="3.6" width="5.6" height="2.9" rx="2" fill="#13263B"/><rect x="8" y="6" width="14" height="22" rx="3.1" fill="#FFFFFF" stroke="#13263B" stroke-width="2"/><rect x="10.0" y="8.9" width="10.1" height="17.6" rx="1.4" fill="#2EDB8F"/><circle cx="12.6" cy="11.3" r="1.2" fill="#13263B"/><circle cx="17.4" cy="11.3" r="1.2" fill="#13263B"/><path d="M12.2 13.5q2.8 2.2 5.6 0" stroke="#13263B" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span>Your battery <b>powers your home by itself</b> (this is called self-consumption mode). If you stay off the grid, we pay you a <b>$1 reward</b>. You just keep an eye on how much power you use.</span></li>
+        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#0B7A5E"/><path d="M9 15l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span>A <b>tiny trickle</b> from the grid is normal and OK: up to <b>0.03 kWh each hour</b>.</span></li>
+        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#E58A00"/><rect x="13.5" y="7" width="3" height="10" rx="1.5" fill="#FFF"/><circle cx="15" cy="21.5" r="2" fill="#FFF"/></svg><span>Your battery can only give <b>so much power at one time</b>. If many big appliances are on together, the extra may come from the grid. <b>Check your battery's app</b> to see how much power (kW) it can give.</span></li>
+      </ul>
     </div>
-    <div class="answers">
-      <label class="btn yes" for="sell-yes" tabindex="0">Yes, I want to sell excess battery power</label>
-      <label class="btn no" for="sell-no" tabindex="0">No, keep it for my home</label>
-    </div>
-    <label class="back" for="sell-unset" tabindex="0">Go back</label>
+    <div class="tour-nav"><label class="btn ok" for="tour-3" tabindex="0">I understand</label></div>
+    <label class="back" for="tour-1" tabindex="0">Go back</label>
   </div>
 
-  <!-- NO-SELL POPUP -->
-  <div class="scr s-q2n">
-    <div class="pop">
-      <svg viewBox="0 0 96 96" aria-hidden="true"><rect x="38.0" y="10.3" width="16.0" height="9.1" rx="2" fill="#13263B"/><rect x="26" y="18" width="40" height="70" rx="8.8" fill="#FFFFFF" stroke="#13263B" stroke-width="4"/><rect x="31.6" y="27.1" width="28.8" height="56.0" rx="4.0" fill="#2EDB8F"/><circle cx="39.2" cy="34.8" r="3.0" fill="#13263B"/><circle cx="52.8" cy="34.8" r="3.0" fill="#13263B"/><path d="M38.0 41.8q8.0 7.0 16.0 0" stroke="#13263B" stroke-width="2.8" fill="none" stroke-linecap="round"/><circle cx="72" cy="74" r="16" fill="#0B7A5E"/><path d="M64 74l6 6 10-11" stroke="#FFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h2>No worries!</h2>
-      <p><b>We will never make you sell.</b> Your battery power stays for your home.</p>
-      <p>The choice is always there. If you ever want to sell, we pay <b>10 cents per kWh from 6pm to 9pm</b>.</p>
-      <p>You are <b>always in control</b> of how much you sell, whether you connect your battery or not.</p>
-      <label class="btn ok" for="tour-1" tabindex="0">OK, continue</label>
+  <!-- SELL -->
+  <div class="scr s-sell">
+    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="on"></i><i class="if-bind"></i><i></i><i></i></div>
+    <div class="feat">
+      <div class="hero h-sell">
+        <div><div class="kick">Saving 3 · Feed-in</div><div class="huge">10c</div><div class="when">per kWh, 6pm to 9pm</div></div>
+        <svg viewBox="0 0 96 96" aria-hidden="true"><rect x="11.8" y="24.9" width="10.4" height="6.0" rx="2" fill="#13263B"/><rect x="4" y="30" width="26" height="46" rx="5.7" fill="#FFFFFF" stroke="#13263B" stroke-width="3"/><rect x="7.6" y="53.5" width="18.7" height="19.3" rx="2.6" fill="#2EDB8F"/><circle cx="12.6" cy="41.0" r="1.9" fill="#13263B"/><circle cx="21.4" cy="41.0" r="1.9" fill="#13263B"/><path d="M11.8 45.6q5.2 4.6 10.4 0" stroke="#13263B" stroke-width="2.1" fill="none" stroke-linecap="round"/><path d="M34 54h12M42 47l7 7-7 7" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="72" cy="54" r="22" fill="#D9DEE5" stroke="#8E96A3" stroke-width="3.1"/><circle cx="72" cy="54" r="15.8" fill="none" stroke="#B3BAC5" stroke-width="1.5"/><text x="72" y="59.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.0" font-weight="800" fill="#3F4B59">10c</text><path d="M59.9 44.1q4.4 -5.5 11.0 -6.6" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".8"/></svg>
+      </div>
+      <p class="fi-intro">Selling is <b>optional</b>. Sell your <b>excess</b> battery power to the grid, and <b>you choose how much</b>.</p>
+      <div class="fi">
+        <div class="fi-row fi-top"><span class="fi-c">10c</span><span class="fi-t"><b>6pm to 9pm</b><small>First 15 kWh each day. Includes an 8c Super Export bonus.</small></span></div>
+        <div class="fi-row"><span class="fi-c fi-lo">2c</span><span class="fi-t"><b>4pm to 6pm and 9pm to 11pm</b><small>Also after your first 15 kWh, 6pm to 9pm.</small></span></div>
+        <div class="fi-row"><span class="fi-c fi-no">0c</span><span class="fi-t"><b>All other times</b><small>Your solar powers your home first, then charges your battery.</small></span></div>
+      </div>
+      <p class="tip" style="margin:0 22px 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Your excess battery power can earn additional credits, instead of just sitting in your battery.</span></p>
+      <p class="warn"><b>Only sell what you do not need.</b> Keep enough battery for your home, so you do not have to buy grid power back.</p>
     </div>
-    <label class="back" for="sell-unset" tabindex="0">Go back</label>
+    <div class="tour-nav"><label class="btn ok" for="tour-4" tabindex="0">I understand</label></div>
+    <label class="back" for="tour-2" tabindex="0">Go back</label>
   </div>
 
-  <!-- TOUR 1: DAY -->
-  <div class="scr s-t1">
-    <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i class="if-sell"></i><i class="if-bind"></i><i></i><i></i></div>
+  <!-- CRIT -->
+  <div class="scr s-crit">
+    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-bind on"></i><i></i><i></i></div>
+    <div class="feat">
+      <div class="hero h-bonus">
+        <div><div class="kick">Optional extra</div><div class="mid">Critical Events</div><div class="when">Get $1 per kWh to sell, and 5c per kWh to charge your battery for free</div></div>
+        <svg viewBox="0 0 96 96" aria-hidden="true"><path d="M24 52h48l-6 34H30z" fill="#F7E9D2"/><path d="M34 52l2 34M48 52v34M62 52l-2 34" stroke="#E0C9A6" stroke-width="3"/><path d="M20 54c0-10 8-12 12-12 0-9 9-14 16-14s16 5 16 14c4 0 12 2 12 12z" fill="#FFB3C7"/><circle cx="50" cy="22" r="9" fill="#D7263D"/><path d="M50 13q2-8 10-10" stroke="#3E7D3A" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="47" cy="19" r="2.5" fill="#FFFFFF" opacity=".7"/></svg>
+      </div>
+      <p class="note" style="margin-top:20px"><b>This is the cherry on top, not the cake.</b> Your real savings come from the 3 savings you just saw.</p>
+      <ul class="pts">
+        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#6A4BC4"/><path d="M15 8v8l5 3" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span>They are <b>rare</b>. They happen when power prices suddenly jump, and last about <b>5 minutes</b>.</span></li>
+        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="7" y="3" width="15" height="25" rx="3" fill="#6A4BC4"/><rect x="9" y="7" width="11" height="15" rx="1.5" fill="#EEE9FB"/><rect x="10.5" y="9" width="8" height="4" rx="1" fill="#6A4BC4"/><circle cx="21" cy="6" r="5" fill="#C2301A"/><text x="21" y="8.5" text-anchor="middle" font-family="Arial" font-size="7" font-weight="800" fill="#FFF">1</text></svg><span>You get a <b>message in our app</b> asking you to sell or charge.</span></li>
+        <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="#F5C542" stroke="#B8860B" stroke-width="1.8"/><circle cx="15" cy="15" r="9.4" fill="none" stroke="#E0A82E" stroke-width="0.9"/><text x="15" y="19.7" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0" font-weight="800" fill="#6B4A00">$</text><path d="M7.8 9.1q2.6 -3.2 6.5 -3.9" stroke="#FFFFFF" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".8"/></svg><span>Do it and you <b>get a reward</b>.</span></li>
+        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><path d="M10 10l10 10M20 10 10 20" stroke="#FFF" stroke-width="3" stroke-linecap="round"/></svg><span>It is <b>your choice</b>. You can <b>ignore the app message</b>.</span></li>
+      </ul>
+    </div>
+    <div class="tour-nav"><label class="btn ok" for="tour-5" tabindex="0">I understand</label></div>
+    <label class="back" for="tour-3" tabindex="0">Go back</label>
+  </div>
+
+  <!-- DAY -->
+  <div class="scr s-day">
+    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-bind done"></i><i class="on"></i><i></i></div>
     <div class="feat">
       <div class="strip" id="daytop">Your day on ZeroHero</div>
       <p class="localt">All times are your <b>local time</b>.</p>
@@ -431,142 +465,32 @@ a{color:var(--ink)}
         </div>
       </details>
     </div>
-    <div class="tour-nav"><label class="btn ok" for="tour-2" tabindex="0">See the savings</label></div>
-    <label class="back" for="sell-unset" tabindex="0">Change my answers</label>
-  </div>
-
-  <!-- TOUR 2: FREE -->
-  <div class="scr s-t2">
-    <div class="dots" aria-hidden="true"><i class="done"></i><i class="on"></i><i></i><i class="if-sell"></i><i class="if-bind"></i><i></i><i></i></div>
-    <div class="feat">
-      <div class="hero h-free">
-        <div><div class="kick">Saving 1</div><div class="huge">FREE</div><div class="when">12pm to 3pm local time, every day</div></div>
-        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="24" fill="#FF8A00"/><path d="M78.0 48.0L90.0 48.0M69.2 69.2L77.7 77.7M48.0 78.0L48.0 90.0M26.8 69.2L18.3 77.7M18.0 48.0L6.0 48.0M26.8 26.8L18.3 18.3M48.0 18.0L48.0 6.0M69.2 26.8L77.7 18.3" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/><path d="M29.3 42.7h16.3l-1.9 8.2h-12.5zM50.4 42.7h16.3l-1.9 8.2h-12.5z" fill="#13263B"/><path d="M45.6 44.2h4.8" stroke="#13263B" stroke-width="1.9"/><path d="M38.9 57.1q9.1 7.2 18.2 0" stroke="#13263B" stroke-width="3.1" fill="none" stroke-linecap="round"/></svg>
-      </div>
-      <ul class="pts">
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="12.2" y="3.6" width="5.6" height="2.9" rx="2" fill="#13263B"/><rect x="8" y="6" width="14" height="22" rx="3.1" fill="#FFFFFF" stroke="#13263B" stroke-width="2"/><rect x="10.0" y="17.2" width="10.1" height="9.2" rx="1.4" fill="#F2A900"/><circle cx="12.6" cy="11.3" r="1.2" fill="#13263B"/><circle cx="17.4" cy="11.3" r="1.2" fill="#13263B"/><path d="M12.2 13.5q2.8 2.2 5.6 0" stroke="#13263B" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span>Your battery usually charges from <b>solar only</b>. If solar is not enough, use this free time to <b>charge it from the grid</b>. Set a schedule (timer) for this.</span></li>
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="2" width="22" height="26" rx="3" fill="#FFFFFF" stroke="#13263B" stroke-width="2"/><path d="M4 8h22" stroke="#13263B" stroke-width="2"/><circle cx="8" cy="5" r="1.2" fill="#13263B"/><circle cx="15" cy="18" r="7" fill="#BFE3F7" stroke="#13263B" stroke-width="2"/><path d="M10 19q2.5-2 5 0t5 0" stroke="#1F6FB2" stroke-width="1.6" fill="none"/></svg><span>Run your <b>big appliances</b> now: washing machine, dryer and dishwasher. Also <b>hot water</b> or a <b>pool pump</b> on a timer, and charging an <b>electric car</b>.</span></li>
-        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#8A5F00"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="12" font-weight="800" fill="#FFF">50</text></svg><span>Free up to <b>50 kWh a day</b>. After that, a small cost.</span></li>
-      </ul>
-      <p class="tip" style="margin:0 22px 18px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Charge your battery in any weather conditions, so it is ready to run your home on your own stored power and avoid the grid as much as possible.</span></p>
-    </div>
-    <div class="tour-nav"><label class="btn ok" for="tour-3" tabindex="0">I understand</label></div>
-    <label class="back" for="tour-1" tabindex="0">Go back</label>
-  </div>
-
-  <!-- TOUR 3: $1 -->
-  <div class="scr s-t3">
-    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="on"></i><i class="if-sell"></i><i class="if-bind"></i><i></i><i></i></div>
-    <div class="feat">
-      <div class="hero h-hero">
-        <div><div class="kick">Saving 2</div><div class="huge">$1 a day</div><div class="when">6pm to 9pm local time, every day</div><div class="yr">Up to $365 a year</div></div>
-        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="50" r="36" fill="#F5C542" stroke="#B8860B" stroke-width="5.0"/><circle cx="48" cy="50" r="25.9" fill="none" stroke="#E0A82E" stroke-width="2.5"/><text x="48" y="60.8" text-anchor="middle" font-family="Arial,sans-serif" font-size="30.0" font-weight="800" fill="#6B4A00">$1</text><path d="M28.2 33.8q7.2 -9.0 18.0 -10.8" stroke="#FFFFFF" stroke-width="3.6" fill="none" stroke-linecap="round" opacity=".8"/><path d="M84 6Q84 14 92 14Q84 14 84 22Q84 14 76 14Q84 14 84 6z" fill="#FFFFFF"/><path d="M12 15Q12 20 17 20Q12 20 12 25Q12 20 7 20Q12 20 12 15z" fill="#FFFFFF"/></svg>
-      </div>
-      <ul class="pts">
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="4" y="5" width="22" height="20" rx="3" fill="#0B7A5E"/><path d="M8 11h14M8 16h10M8 21h7" stroke="#FFF" stroke-width="2.5" stroke-linecap="round"/></svg><span>The $1 is there to <b>help pay your daily supply charge</b>, the fixed amount on your bill, applied per day.</span></li>
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="12.2" y="3.6" width="5.6" height="2.9" rx="2" fill="#13263B"/><rect x="8" y="6" width="14" height="22" rx="3.1" fill="#FFFFFF" stroke="#13263B" stroke-width="2"/><rect x="10.0" y="8.9" width="10.1" height="17.6" rx="1.4" fill="#2EDB8F"/><circle cx="12.6" cy="11.3" r="1.2" fill="#13263B"/><circle cx="17.4" cy="11.3" r="1.2" fill="#13263B"/><path d="M12.2 13.5q2.8 2.2 5.6 0" stroke="#13263B" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span>Your battery <b>powers your home by itself</b> (this is called self-consumption mode). If you stay off the grid, we pay you a <b>$1 reward</b>. You just keep an eye on how much power you use.</span></li>
-        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#0B7A5E"/><path d="M9 15l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span>A <b>tiny trickle</b> from the grid is normal and OK: up to <b>0.03 kWh each hour</b>.</span></li>
-        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#E58A00"/><rect x="13.5" y="7" width="3" height="10" rx="1.5" fill="#FFF"/><circle cx="15" cy="21.5" r="2" fill="#FFF"/></svg><span>Your battery can only give <b>so much power at one time</b>. If many big appliances are on together, the extra may come from the grid. <b>Check your battery's app</b> to see how much power (kW) it can give.</span></li>
-      </ul>
-    </div>
-    <div class="tour-nav"><label class="btn ok" for="tour-4" tabindex="0">I understand</label></div>
-    <label class="back" for="tour-2" tabindex="0">Go back</label>
-  </div>
-
-  <!-- TOUR 4: SELL (sellers only) -->
-  <div class="scr s-t4">
-    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-sell on"></i><i class="if-bind"></i><i></i><i></i></div>
-    <div class="feat">
-      <div class="hero h-sell">
-        <div><div class="kick">Saving 3 · Feed-in</div><div class="huge">10c</div><div class="when">per kWh, 6pm to 9pm</div></div>
-        <svg viewBox="0 0 96 96" aria-hidden="true"><rect x="11.8" y="24.9" width="10.4" height="6.0" rx="2" fill="#13263B"/><rect x="4" y="30" width="26" height="46" rx="5.7" fill="#FFFFFF" stroke="#13263B" stroke-width="3"/><rect x="7.6" y="53.5" width="18.7" height="19.3" rx="2.6" fill="#2EDB8F"/><circle cx="12.6" cy="41.0" r="1.9" fill="#13263B"/><circle cx="21.4" cy="41.0" r="1.9" fill="#13263B"/><path d="M11.8 45.6q5.2 4.6 10.4 0" stroke="#13263B" stroke-width="2.1" fill="none" stroke-linecap="round"/><path d="M34 54h12M42 47l7 7-7 7" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="72" cy="54" r="22" fill="#D9DEE5" stroke="#8E96A3" stroke-width="3.1"/><circle cx="72" cy="54" r="15.8" fill="none" stroke="#B3BAC5" stroke-width="1.5"/><text x="72" y="59.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="14.0" font-weight="800" fill="#3F4B59">10c</text><path d="M59.9 44.1q4.4 -5.5 11.0 -6.6" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".8"/></svg>
-      </div>
-      <p class="fi-intro">Sell your <b>excess</b> battery power to the grid. <b>You choose how much.</b></p>
-      <div class="fi">
-        <div class="fi-row fi-top"><span class="fi-c">10c</span><span class="fi-t"><b>6pm to 9pm</b><small>First 15 kWh each day. Includes an 8c Super Export bonus.</small></span></div>
-        <div class="fi-row"><span class="fi-c fi-lo">2c</span><span class="fi-t"><b>4pm to 6pm and 9pm to 11pm</b><small>Also after your first 15 kWh, 6pm to 9pm.</small></span></div>
-        <div class="fi-row"><span class="fi-c fi-no">0c</span><span class="fi-t"><b>All other times</b><small>Your solar powers your home first, then charges your battery.</small></span></div>
-      </div>
-      <p class="tip" style="margin:0 22px 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>Your excess battery power can earn additional credits, instead of just sitting in your battery.</span></p>
-      <p class="warn"><b>Only sell what you do not need.</b> Keep enough battery for your home, so you do not have to buy grid power back.</p>
-    </div>
-    <div class="tour-nav"><label class="btn ok" for="tour-5" tabindex="0">I understand</label></div>
-    <label class="back" for="tour-3" tabindex="0">Go back</label>
-  </div>
-
-  <!-- TOUR 5: CRITICAL EVENTS (bind only) -->
-  <div class="scr s-t5">
-    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-sell done"></i><i class="if-bind on"></i><i></i><i></i></div>
-    <div class="feat">
-      <div class="hero h-bonus">
-        <div><div class="kick">Optional extra</div><div class="mid">Critical Events</div><div class="when">Get $1 per kWh to sell, and 5c per kWh to charge your battery for free</div></div>
-        <svg viewBox="0 0 96 96" aria-hidden="true"><path d="M24 52h48l-6 34H30z" fill="#F7E9D2"/><path d="M34 52l2 34M48 52v34M62 52l-2 34" stroke="#E0C9A6" stroke-width="3"/><path d="M20 54c0-10 8-12 12-12 0-9 9-14 16-14s16 5 16 14c4 0 12 2 12 12z" fill="#FFB3C7"/><circle cx="50" cy="22" r="9" fill="#D7263D"/><path d="M50 13q2-8 10-10" stroke="#3E7D3A" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="47" cy="19" r="2.5" fill="#FFFFFF" opacity=".7"/></svg>
-      </div>
-      <p class="note" style="margin-top:20px"><b>This is the cherry on top, not the cake.</b> Your real savings come from the 3 savings you just saw.</p>
-      <ul class="pts">
-        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#6A4BC4"/><path d="M15 8v8l5 3" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span>They are <b>rare</b>. They happen when power prices suddenly jump, and last about <b>5 minutes</b>.</span></li>
-        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="7" y="3" width="15" height="25" rx="3" fill="#6A4BC4"/><rect x="9" y="7" width="11" height="15" rx="1.5" fill="#EEE9FB"/><rect x="10.5" y="9" width="8" height="4" rx="1" fill="#6A4BC4"/><circle cx="21" cy="6" r="5" fill="#C2301A"/><text x="21" y="8.5" text-anchor="middle" font-family="Arial" font-size="7" font-weight="800" fill="#FFF">1</text></svg><span>You get a <b>message in our app</b> asking you to sell or charge.</span></li>
-        <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="#F5C542" stroke="#B8860B" stroke-width="1.8"/><circle cx="15" cy="15" r="9.4" fill="none" stroke="#E0A82E" stroke-width="0.9"/><text x="15" y="19.7" text-anchor="middle" font-family="Arial,sans-serif" font-size="13.0" font-weight="800" fill="#6B4A00">$</text><path d="M7.8 9.1q2.6 -3.2 6.5 -3.9" stroke="#FFFFFF" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".8"/></svg><span>Do it and you <b>get a reward</b>.</span></li>
-        <li class="mi"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><path d="M10 10l10 10M20 10 10 20" stroke="#FFF" stroke-width="3" stroke-linecap="round"/></svg><span>It is <b>your choice</b>. You can <b>ignore the app message</b>.</span></li>
-      </ul>
-    </div>
     <div class="tour-nav"><label class="btn ok" for="tour-6" tabindex="0">I understand</label></div>
-    <label class="back if-sell" for="tour-4" tabindex="0">Go back</label><label class="back if-nosell" for="tour-3" tabindex="0">Go back</label>
+    <span class="if-bind"><label class="back" for="tour-4" tabindex="0">Go back</label></span><span class="if-nobind"><label class="back" for="tour-3" tabindex="0">Go back</label></span>
   </div>
 
-  <!-- TOUR 6: BATTERY TIMER -->
-  <div class="scr s-t6">
-    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-sell done"></i><i class="if-bind done"></i><i class="on"></i><i></i></div>
-    <div class="feat">
-      <div class="hero h-setup">
-        <div><div class="kick">Last step</div><div class="mid">Set up battery scheduling</div></div>
-        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="22" cy="22" r="11" fill="#F2A900"/><circle cx="74" cy="22" r="11" fill="#F2A900"/><path d="M28 84l-6 8M68 84l6 8" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/><circle cx="48" cy="54" r="32" fill="#FFFFFF" stroke="#F2A900" stroke-width="5"/><path d="M48 34v20l13 8" stroke="#13263B" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="48" cy="54" r="3.5" fill="#13263B"/><path d="M48 26v4M48 78v4M20 54h4M72 54h4" stroke="#13263B" stroke-width="3" stroke-linecap="round"/></svg>
-      </div>
-      <p class="sch-one">Your battery will <b>not</b> charge from the grid by itself. It needs to be <b>programmed</b> to use the free power.</p>
-      <div class="sch-set">
-        <span class="sch-h">What to set</span>
-        <div class="sch-row"><span class="sch-tm">12pm to 3pm</span><span>Charge from the grid, up to 100%</span></div>
-        <div class="if-sell"><div class="sch-row"><span class="sch-tm">6pm to 9pm</span><span>Sell your excess power</span></div></div>
-      </div>
-
-      <div class="fb">If you use our app (binding):</div>
-      <div class="if-bind">
-        <p class="sch-sub">How we help you set it up</p>
-        <ul class="pts" style="padding-top:0">
-          <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="8" y="2" width="15" height="26" rx="3" fill="#0B7A5E"/><rect x="10" y="5" width="11" height="17" rx="1.5" fill="#E2F4EC"/><rect x="12.5" y="9" width="6" height="10" rx="1.5" fill="none" stroke="#0B7A5E" stroke-width="1.6"/><rect x="13.8" y="13" width="3.4" height="4.6" fill="#2EDB8F"/><circle cx="15.5" cy="25" r="1.3" fill="#E2F4EC"/></svg><span>Our app <b>takes over scheduling</b> from your battery's own app.</span></li>
-          <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="14" font-weight="800" fill="#FFF">3</text></svg><span><b>3 modes:</b> Self-consumption (default), Schedule (you set the times), or Auto (we charge it for you, and can also sell within limits you set).</span></li>
-        </ul>
-        <div class="sch-btns">
-          <a class="sb" href="https://www.globirdenergy.com.au/join-vpp/" target="_blank" rel="noopener"><b>Step 1</b>Join the VPP (bind your battery)<small>During sign-up, or later in our app</small></a>
-          <a class="sb" href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/" target="_blank" rel="noopener"><b>Step 2</b>Watch the setup video<small>Shows the 3 modes and how to set your times</small></a>
-        </div>
-      </div>
-
-      <div class="fb">If you use your battery's own app:</div>
-      <div class="if-nobind">
-        <p class="sch-sub">How we help you set it up</p>
-        <div class="sch-btns">
-          <a class="sb" href="https://www.globirdenergy.com.au/battery-scheduling/" target="_blank" rel="noopener"><b>Our step-by-step guides</b>Set up scheduling in your battery's own app<small>Covers most brands</small></a>
-        </div>
-        <ul class="pts">
-          <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><path d="M8 26c1-5 13-5 14 0" fill="#F2A900"/><circle cx="15" cy="15" r="5" fill="#F3C9A0"/><path d="M9 13a6 6 0 0 1 12 0z" fill="#F2A900"/><rect x="8" y="12" width="14" height="2" rx="1" fill="#F2A900"/></svg><span>Brand not covered? Your <b>installer</b> or <b>battery manufacturer</b> can help, or search online for your model.</span></li>
-        </ul>
-      </div>
+  <!-- PROGRAMMING POPUP -->
+  <div class="scr s-prog">
+    <div class="dots" aria-hidden="true"><i class="done"></i><i class="done"></i><i class="done"></i><i class="if-bind done"></i><i class="done"></i><i class="on"></i></div>
+    <div class="pop">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="22" cy="22" r="11" fill="#F2A900"/><circle cx="74" cy="22" r="11" fill="#F2A900"/><path d="M28 84l-6 8M68 84l6 8" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/><circle cx="48" cy="54" r="32" fill="#FFFFFF" stroke="#F2A900" stroke-width="5"/><path d="M48 34v20l13 8" stroke="#13263B" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="48" cy="54" r="3.5" fill="#13263B"/><path d="M48 26v4M48 78v4M20 54h4M72 54h4" stroke="#13263B" stroke-width="3" stroke-linecap="round"/></svg>
+      <h2>One quick thing</h2>
+      <p>To get <b>free charging</b> and to <b>sell your excess power</b>, your battery needs to be <b>programmed</b> (scheduled).</p>
+      <p>The <b>$1 a day</b> is automatic. There is nothing to set up for it.</p>
+      <p>Do not worry, <b>easy setup instructions are at the end</b> of this guide.</p>
+      <label class="btn ok" for="tour-7" tabindex="0">Got it</label>
     </div>
-    <div class="tour-nav"><label class="btn ok" for="tour-7" tabindex="0">See my next steps</label></div>
-    <span class="if-bind"><label class="back" for="tour-5" tabindex="0">Go back</label></span><span class="if-nobind"><span class="if-sell"><label class="back" for="tour-4" tabindex="0">Go back</label></span><span class="if-nosell"><label class="back" for="tour-3" tabindex="0">Go back</label></span></span>
+    <label class="back" for="tour-5" tabindex="0">Go back</label>
   </div>
 
-  <!-- TOUR 7: DONE -->
-  <div class="scr s-t7">
+  <!-- FINAL -->
+  <div class="scr s-final">
     <h1>That's ZeroHero in a nutshell</h1>
-    <p class="if-nobind">Need help setting your battery's timer? <a href="https://www.globirdenergy.com.au/battery-scheduling/" target="_blank" rel="noopener"><b>Our step-by-step battery guides</b></a></p>
-    <p class="if-bind">Need help setting your battery's timer? <a href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/" target="_blank" rel="noopener"><b>Watch: how to use our app</b></a></p>
     <div class="done-list">
       <div><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#0B7A5E"/><path d="M8 14l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg><span><span class="if-bind">Schedule your battery in our app</span><span class="if-nobind">Schedule your battery in its own app</span></span></div>
       <div><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#0B7A5E"/><path d="M8 14l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>Free power 12pm to 3pm (up to 50 kWh)</div>
       <div><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#0B7A5E"/><path d="M8 14l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>$1 a day, 6pm to 9pm</div>
-      <div class="if-sell"><p class="dli"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#0B7A5E"/><path d="M8 14l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>10c per kWh if you sell, 6pm to 9pm</p></div>
+      <div class="dlw"><p class="dli"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#0B7A5E"/><path d="M8 14l4 4 8-9" stroke="#FFF" stroke-width="3" fill="none" stroke-linecap="round"/></svg>10c per kWh if you sell, 6pm to 9pm</p></div>
     </div>
 
     <p class="tip" style="margin:0 0 16px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19C5 10 11 5 20 4c0 9-5 15-14 15z" fill="#0B7A5E"/><path d="M5 19c4-5 7-8 11-11" stroke="#FFF" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>With good habits, most of your power comes from your own solar and battery, so the price of grid power matters much less.</span></p>
@@ -581,6 +505,8 @@ a{color:var(--ink)}
         <div><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#2EDB8F"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#13263B" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>We will let you know</b> when your switch to us is complete.</span></div>
       </div>
     </div>
+
+    <label class="btn sched-btn" for="tour-8" tabindex="0"><span>Set up battery scheduling</span><small>Easy step-by-step help, for after you sign up</small></label>
 
     <div class="contact">
       <div class="box">
@@ -614,6 +540,48 @@ a{color:var(--ink)}
     </div>
     <label class="back" for="tour-1" tabindex="0">See it all again</label>
   </div>
+
+  <!-- SCHED -->
+  <div class="scr s-sched">
+    <div class="feat">
+      <div class="hero h-setup">
+        <div><div class="kick">After you sign up</div><div class="mid">Set up battery scheduling</div></div>
+        <svg viewBox="0 0 96 96" aria-hidden="true"><circle cx="22" cy="22" r="11" fill="#F2A900"/><circle cx="74" cy="22" r="11" fill="#F2A900"/><path d="M28 84l-6 8M68 84l6 8" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/><circle cx="48" cy="54" r="32" fill="#FFFFFF" stroke="#F2A900" stroke-width="5"/><path d="M48 34v20l13 8" stroke="#13263B" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="48" cy="54" r="3.5" fill="#13263B"/><path d="M48 26v4M48 78v4M20 54h4M72 54h4" stroke="#13263B" stroke-width="3" stroke-linecap="round"/></svg>
+      </div>
+      <p class="sch-one">Your battery will <b>not</b> charge from the grid by itself. It needs to be <b>programmed</b> to use the free power.</p>
+      <div class="sch-set">
+        <span class="sch-h">What to set</span>
+        <div class="sch-row"><span class="sch-tm">12pm to 3pm</span><span>Charge from the grid, up to 100%</span></div>
+        <div class=""><div class="sch-row"><span class="sch-tm">6pm to 9pm</span><span>Optional: sell your excess power</span></div></div>
+      </div>
+
+      <div class="fb">If you use our app (binding):</div>
+      <div class="if-bind">
+        <p class="sch-sub">How we help you set it up</p>
+        <ul class="pts" style="padding-top:0">
+          <li><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="8" y="2" width="15" height="26" rx="3" fill="#0B7A5E"/><rect x="10" y="5" width="11" height="17" rx="1.5" fill="#E2F4EC"/><rect x="12.5" y="9" width="6" height="10" rx="1.5" fill="none" stroke="#0B7A5E" stroke-width="1.6"/><rect x="13.8" y="13" width="3.4" height="4.6" fill="#2EDB8F"/><circle cx="15.5" cy="25" r="1.3" fill="#E2F4EC"/></svg><span>Our app <b>takes over scheduling</b> from your battery's own app.</span></li>
+          <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="14" font-weight="800" fill="#FFF">3</text></svg><span><b>3 modes:</b> Self-consumption (default), Schedule (you set the times), or Auto (we charge it for you, and can also sell within limits you set).</span></li>
+        </ul>
+        <div class="sch-btns">
+          <a class="sb" href="https://www.globirdenergy.com.au/join-vpp/" target="_blank" rel="noopener"><b>Step 1</b>Join the VPP (bind your battery)<small>During sign-up, or later in our app</small></a>
+          <a class="sb" href="https://www.globirdenergy.com.au/energy-saver/zerohero-app/" target="_blank" rel="noopener"><b>Step 2</b>Watch the setup video<small>Shows the 3 modes and how to set your times</small></a>
+        </div>
+      </div>
+
+      <div class="fb">If you use your battery's own app:</div>
+      <div class="if-nobind">
+        <p class="sch-sub">How we help you set it up</p>
+        <div class="sch-btns">
+          <a class="sb" href="https://www.globirdenergy.com.au/battery-scheduling/" target="_blank" rel="noopener"><b>Our step-by-step guides</b>Set up scheduling in your battery's own app<small>Covers most brands</small></a>
+        </div>
+        <ul class="pts">
+          <li><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#13263B"/><path d="M8 26c1-5 13-5 14 0" fill="#F2A900"/><circle cx="15" cy="15" r="5" fill="#F3C9A0"/><path d="M9 13a6 6 0 0 1 12 0z" fill="#F2A900"/><rect x="8" y="12" width="14" height="2" rx="1" fill="#F2A900"/></svg><span>Brand not covered? Your <b>installer</b> or <b>battery manufacturer</b> can help, or search online for your model.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tour-nav"><label class="btn ok" for="tour-7" tabindex="0">Back to sign up</label></div>
+    
+  </div>
 </div>
 <script>
 (function(){
@@ -622,25 +590,21 @@ a{color:var(--ink)}
   // A new answer clears every later answer, so an old answer can never carry over into a new run.
   function tick(id){var el=document.getElementById(id);if(el)el.checked=true;}
   function cascade(id){
-    if(id==="start-yes"){tick("bind-unset");tick("sell-unset");tick("tour-0");}
-    else if(id==="bind-yes"||id==="bind-no"){tick("sell-unset");tick("tour-0");}
-    else if(id==="sell-yes"||id==="sell-no"){tick("tour-0");}
+    if(id==="start-yes"){tick("bind-unset");tick("tour-0");}
+    else if(id==="bind-yes"||id==="bind-no"){tick("tour-0");}
   }
+  var SCR={1:"s-free",2:"s-one",3:"s-sell",4:"s-crit",5:"s-day",6:"s-prog",7:"s-final",8:"s-sched"};
   function render(){
-    var start=v("start"),bind=v("bind"),sell=v("sell"),tour=v("tour"),scr;
+    var start=v("start"),bind=v("bind"),tour=v("tour"),scr;
     if(start!=="yes")scr="s-welcome";
     else if(bind==="unset")scr="s-q1";
     else if(bind==="help")scr="s-q1h";
-    else if(sell==="unset")scr="s-q2";
-    else if(sell==="help")scr="s-q2h";
-    else if(sell==="no"&&tour==="0")scr="s-q2n";
-    else{var t=tour==="0"?1:+tour;if(t===4&&sell!=="yes")t=5;if(t===5&&bind!=="yes")t=6;scr="s-t"+t;}
+    else{var t=tour==="0"?1:+tour;if(t===4&&bind!=="yes")t=5;scr=SCR[t];}
     var refer=document.getElementById("refer").checked;
     app.classList.add("js");
     function set(sel,show){document.querySelectorAll(sel).forEach(function(el){el.hidden=!show;});}
     document.querySelectorAll(".scr").forEach(function(s){s.hidden=!s.classList.contains(scr);});
     set(".if-bind",bind==="yes"); set(".if-nobind",bind==="no");
-    set(".if-sell",sell==="yes"); set(".if-nosell",sell==="no");
     set(".refer-info",refer); set(".open-lbl",!refer); set(".close-lbl",refer);
   }
   document.querySelectorAll(".r").forEach(function(r){
@@ -651,7 +615,7 @@ a{color:var(--ink)}
   });
   // Always start fresh: some viewers restore old answers silently, which mixed up the binding screens.
   function reset(){
-    ["start-no","bind-unset","sell-unset","tour-0"].forEach(function(id){document.getElementById(id).checked=true;});
+    ["start-no","bind-unset","tour-0"].forEach(function(id){document.getElementById(id).checked=true;});
     document.getElementById("refer").checked=false;
     render();
   }
